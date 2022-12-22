@@ -1,0 +1,152 @@
+:root {
+    --container-width: 85%;
+    --dark-blue: #232a37;
+    --pink: #CE7777;
+    --off-white: #F2E5E5;
+  }  
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--dark-blue);
+    font-family: 'Quicksand', sans-serif;
+}
+
+label {
+    color: var(--dark-blue);
+}
+
+p {
+    color: var(--pink);
+}
+
+h1 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: var(--off-white);
+    position: absolute;
+    top: 2px;
+    left: 10vw;
+}
+
+#text-input {
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px 2.5em;
+    margin-bottom: -4em;
+    width: 100%;
+    background-color: var(--off-white);
+    border-color: var(--pink);
+    border-width: 6em 9em;
+    display: block;
+    outline: none;
+}
+
+.search-options-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dropdown-menus {
+    display: flex;
+}
+
+.dropdown-menus div {
+    margin-right: 2em;
+}
+
+button, select {
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    border: 1px solid var(--pink);
+    background-color: var(--off-white);
+    color: var(--dark-blue);
+}
+
+button {
+    padding: .6em 2em;
+}
+
+button:hover {
+    background-color: #edcece;
+}
+
+select {
+    padding: .2em .5em;
+}
+
+#animation {
+    width: 100px;
+    height: 100px;
+    display: none;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#input-error-message, #no-results-error-message, #general-error-message {
+    text-align: center;
+    margin: 3em auto;
+    display: none;
+}
+
+#img-container {
+    width: var(--container-width);
+    margin: 2em auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.large-card {
+    min-height: 100vh;
+    width: var(--container-width);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.small-card {
+    flex-grow: 1;
+}
+
+.small-img {
+    height: 200px;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+.large-img {
+    width: auto;
+    z-index: 10; 
+    animation: fade-in-image .5s;
+}
+
+.dark-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;  
+    background-color: black;
+    opacity: .7;
+    animation: fade-in-background .5s;
+    z-index: 5;
+}
+
+@keyframes fade-in-background {
+    0% { opacity: 0; }
+    100% { opacity: .7; }
+}
+
+@keyframes fade-in-image {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
